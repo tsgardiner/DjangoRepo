@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.core.management.commands.runserver import naiveip_re
+
+from inventory import views
 
 urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^item/(?P<id>\d+)/', views.item_detail, name='item_detail'),
     url(r'^admin/', admin.site.urls),
 ]
