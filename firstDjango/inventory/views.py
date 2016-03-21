@@ -20,3 +20,5 @@ def item_detail(request, id):
     return render(request, 'inventory/item_detail.html', {
         'item': item,
     })
+
+
