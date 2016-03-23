@@ -7,3 +7,4 @@ class Item(models.Model):
     amount = models.IntegerField()
 
 
+
